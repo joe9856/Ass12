@@ -1,0 +1,144 @@
+*{
+    margin: 0; /* ล้างค่า margin ของทุก element */
+    padding: 0; /* ล้างค่า padding ของทุก element */
+    box-sizing: border-box; /* กำหนดให้การคำนวณขนาดรวม border ด้วย */
+}
+
+@font-face {
+    font-family: 'Zodiak'; /* ตั้งชื่อฟอนต์ที่ใช้งาน */
+    src: url(fonts/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-BoldItalic.ttf); /* ชี้ไปที่ตำแหน่งของฟอนต์ */
+}
+
+body{
+    background-color: white; /* กำหนดสีพื้นหลังของหน้าเป็นสีขาว */
+    font-family:'Zodiak'; /* ใช้ฟอนต์ที่เรากำหนดจาก @font-face */
+}
+
+.container{
+    text-align: center; /* จัดเรียงข้อความใน container ให้อยู่ตรงกลาง */
+    position: relative; /* กำหนดตำแหน่งแบบ relative เพื่อใช้ใน child elements */
+}
+
+table, tr, th, td{
+    border: 1px solid #000; /* เพิ่มเส้นขอบสีดำ 1px รอบ table, tr, th, td */
+    border-collapse: collapse; /* ทำให้เส้นขอบของตารางรวมเป็นเส้นเดียว */
+    padding: 20px; /* กำหนด padding ของเซลล์ในตาราง */
+}
+
+table{
+    margin: 10% 20%; /* กำหนด margin ด้านบนและล่าง 10% และซ้ายขวา 20% */
+    background-color: antiquewhite; /* พื้นหลังของตารางเป็นสี antiquewhite */
+    font-size: 1.2em; /* ขนาดฟอนต์ของตารางเป็น 1.2 เท่าของค่า default */
+}
+
+.container h1{
+    margin: 5% 0; /* กำหนด margin บนและล่างของ h1 ใน container */
+}
+
+table tbody th{
+    color: red; /* กำหนดสีข้อความใน th ของ tbody เป็นสีแดง */
+}
+
+tr{
+    background-color: #CAF4FF; /* กำหนดพื้นหลังของแถวในตารางเป็นสีฟ้าอ่อน */
+    color: #333333; /* กำหนดสีข้อความของแถวในตารางเป็นสีเทาเข้ม */
+}
+
+thead tr:first-child {
+    background-color: #5AB2FF; /* กำหนดพื้นหลังของแถวแรกใน thead เป็นสีฟ้า */
+    font-size: 24px; /* ขนาดฟอนต์ของแถวแรกเป็น 24px */
+    font-weight: bold; /* กำหนดข้อความเป็นตัวหนา */
+    color: #F0F0F0; /* กำหนดสีข้อความเป็นสีขาวเทา */
+}
+
+thead tr:nth-child(2) {
+    background-color: #A0DEFF; /* กำหนดพื้นหลังของแถวที่สองใน thead เป็นสีฟ้าอ่อน */
+    color: #333333; /* กำหนดสีข้อความเป็นสีเทาเข้ม */
+}
+
+/* thead tr:nth-child(3) {
+    background-color: lightcoral; 
+    font-size: 18px;
+} */
+
+.btn_go{
+    display: flex; /* แสดงเป็น flexbox */
+    justify-content: center; /* จัดตำแหน่งเนื้อหาให้อยู่กลาง */
+    margin: 100px 0; /* กำหนด margin บนและล่าง 100px */
+}
+
+.btn_go a{
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    text-decoration: none; /* ไม่ให้มีขีดเส้นใต้ */
+    border: 1px solid #000; /* เพิ่มเส้นขอบสีดำ 1px รอบลิงก์ */
+    padding: 30px; /* เพิ่ม padding รอบข้อความภายในลิงก์ */
+    border-radius: 30px; /* กำหนดให้มุมของลิงก์โค้ง */
+    width: 200px; /* ความกว้างของลิงก์เป็น 200px */
+    background-color: #3AA6B9; /* พื้นหลังของลิงก์เป็นสีฟ้าอมเขียว */
+    color: white; /* สีของข้อความเป็นสีขาว */
+    font-size: 1.4em; /* ขนาดฟอนต์เป็น 1.4 เท่าของค่า default */
+}
+
+.btn_go a:hover{
+    background-color: #4379F2; /* เปลี่ยนพื้นหลังเมื่อ hover เป็นสีฟ้าเข้ม */
+    font-size: 1.5em; /* ขนาดฟอนต์ใหญ่ขึ้นเมื่อ hover */
+    transform: scale(1.03); /* ขยายขนาดเล็กน้อยเมื่อ hover */
+    transition: .3s ease-in-out; /* กำหนดการเปลี่ยนแปลงให้มีความลื่น */
+}
+
+th:hover{
+    background-color: #FFF9D0; /* เปลี่ยนสีพื้นหลัง th เป็นสีเหลืองอ่อนเมื่อ hover */
+}
+
+td:hover{
+    background-color: #EECAD5; /* เปลี่ยนสีพื้นหลัง td เป็นสีชมพูอ่อนเมื่อ hover */
+}
+
+thead tr:hover{
+    color: #333333; /* เปลี่ยนสีข้อความของแถวใน thead เป็นสีเทาเข้มเมื่อ hover */
+}
+
+@keyframes fade-in {
+    0% {
+        scale: 0; /* เริ่มด้วยขนาดเล็กสุด */
+        opacity: 0; /* ความโปร่งใสเริ่มที่ 0 */
+    }
+    50% {
+        scale: 1; /* ขยายกลับมาเป็นขนาดปกติ */
+        opacity: 1; /* ความโปร่งใสกลับมาเป็นปกติ */
+    }
+}
+
+table {
+    animation: fade-in 5s ease-in-out forwards; /* เพิ่ม animation fade-in ให้กับตาราง */
+    animation-timeline: view(); /* ใช้ timeline เพื่อควบคุมการแสดง */
+    animation-range: entry 0% cover 40%; /* กำหนดช่วงการทำงานของ animation */
+}
+
+nav{
+    display: flex; /* แสดงเป็น flexbox */
+    justify-content: center; /* จัดเนื้อหาให้อยู่กลาง */
+    position: fixed; /* ทำให้ nav ติดกับตำแหน่งที่กำหนด */
+    z-index: 999; /* กำหนด z-index สูงสุด */
+    top: 8px; /* กำหนดระยะจากด้านบน */
+    right: 3px; /* กำหนดระยะจากด้านขวา */
+}
+
+nav a{
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    text-decoration: none; /* ไม่ให้มีขีดเส้นใต้ */
+    border: 1px solid #000; /* เพิ่มเส้นขอบสีดำ 1px รอบลิงก์ */
+    padding: 10px; /* เพิ่ม padding รอบข้อความภายในลิงก์ */
+    border-radius: 30px; /* กำหนดมุมโค้ง */
+    width: 150px; /* ความกว้างของลิงก์เป็น 150px */
+    background-color: #4379F2; /* พื้นหลังเป็นสีฟ้าเข้ม */
+    color: white; /* สีของข้อความเป็นสีขาว */
+    font-size: 1.4em; /* ขนาดฟอนต์ 1.4 เท่าของค่า default */
+}
+
+nav a:hover{
+    background-color: #4379F2; /* เปลี่ยนพื้นหลังเป็นสีฟ้าเข้มเมื่อ hover */
+    font-size: 1.5em; /* ขนาดฟอนต์ใหญ่ขึ้นเมื่อ hover */
+    transform: scale(1.03); /* ขยายขนาดเล็กน้อยเมื่อ hover */
+    transition: .3s ease-in-out; /* เพิ่มการเปลี่ยนแปลงลื่นไหล */
+}

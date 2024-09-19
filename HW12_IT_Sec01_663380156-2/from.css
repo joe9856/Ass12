@@ -1,0 +1,301 @@
+*{
+    padding: 0; /* ล้างค่า padding ของทุก element */
+    margin: 0; /* ล้างค่า margin ของทุก element */
+    box-sizing: border-box; /* กำหนดให้ขนาดรวม border ด้วย */
+}
+
+@font-face {
+    font-family: 'Zodiak'; /* ตั้งชื่อฟอนต์ที่ใช้งาน */
+    src: url(fonts/Zodiak_Complete/Fonts/WEB/fonts/Zodiak-BoldItalic.ttf); /* ชี้ไปที่ไฟล์ฟอนต์ */
+}
+
+body{
+    font-family:'Zodiak'; /* ใช้ฟอนต์ที่กำหนด */
+    min-height: 100vh; /* ความสูงขั้นต่ำของ body เท่ากับความสูงของ viewport */
+    padding: 0 20px; /* กำหนด padding ซ้ายขวา */
+    font-size: 1.2em; /* ขนาดฟอนต์เท่ากับ 1.2 เท่าของค่าเริ่มต้น */
+    background-color: #B1AFFF; /* สีพื้นหลังของ body */
+    color: #333333; /* สีข้อความเป็นสีเทาเข้ม */
+}
+
+.container{
+    border: 1px solid #000; /* เพิ่มเส้นขอบสีดำ 1px รอบ container */
+    padding: 40px; /* เพิ่ม padding ภายใน container */
+    margin: 5% 10%; /* กำหนดระยะห่างด้านบนและล่าง 5% และซ้ายขวา 10% */
+    border-radius: 50px; /* มุมของ container โค้ง 50px */
+    background-color: #BBE9FF; /* พื้นหลังของ container เป็นสีฟ้าอ่อน */
+}
+
+header h1{
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    margin: 4% 0; /* กำหนด margin บนและล่าง 4% */
+}
+
+.input-box{
+    margin-top: 20px; /* กำหนดระยะห่างด้านบน 20px */
+}
+
+.input-box input{
+    width: 100%; /* ความกว้างของ input 100% */
+    margin-top:10px; /* กำหนดระยะห่างด้านบน 10px */
+}
+
+.input-box label{
+    font-size: 1.3em; /* ขนาดฟอนต์ของ label 1.3em */
+}
+
+.column{
+    width: 100%; /* กำหนดความกว้างของ column ให้เต็ม 100% */
+    margin: 0; /* ล้างค่า margin */
+}
+
+#input-box-1{
+    width: 47.5%; /* กำหนดความกว้างเป็น 47.5% */
+    margin-right: 5%; /* ระยะห่างขวา 5% */
+}
+
+#input-box-2{
+    width: 47.5%; /* กำหนดความกว้างเป็น 47.5% */
+}
+
+.form .column{
+    display: flex; /* ใช้ flexbox จัดเรียง column */
+}
+
+.Select_Shoe_Size{
+    display: flex; /* ใช้ flexbox ในการจัดการ */
+    flex-wrap: wrap; /* อนุญาตให้มีการห่อบรรทัดเมื่อขนาดใหญ่เกิน */
+    padding: 20px; /* กำหนด padding รอบๆ */
+}
+
+#Size{
+    border-radius: 15px; /* มุมโค้งของ input ขนาดรองเท้า */
+}
+
+.shipping{
+    margin: 5% 0; /* กำหนด margin บนและล่าง 5% */
+}
+
+.shipping-group{
+    margin-top: 20px; /* กำหนดระยะห่างด้านบน 20px */
+}
+
+.shipping-group input{
+    width: 100%; /* ความกว้าง 100% */
+}
+
+.Payment_Method{
+    margin: 3% 0; /* กำหนด margin บนและล่าง 3% */
+}
+
+.Preferred_Delivery{
+    margin: 3% 0; /* กำหนด margin บนและล่าง 3% */
+}
+
+#delivery{
+    border-radius: 15px; /* มุมโค้งของตัวเลือกการส่งสินค้า */
+}
+
+.Additional_Notes{
+    margin: 5% 0; /* กำหนด margin บนและล่าง 5% */
+}
+
+.box_select p{
+    border: 1px solid #000; /* เส้นขอบสีดำ 1px */
+    padding: 10px; /* กำหนด padding */
+    margin: 10px; /* กำหนดระยะห่าง */
+    color: #333333; /* สีข้อความ */
+    border-radius: 20px; /* มุมโค้ง */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อ hover */
+    background-color:  #41C9E2; /* พื้นหลังของ box */
+}
+
+.box_select p:hover {
+    background-color: #ACE2E1; /* เปลี่ยนพื้นหลังเมื่อ hover */
+}
+
+.box_select p:active {
+    background-color: #7695FF; /* เปลี่ยนพื้นหลังเมื่อ active */
+    color: #000; /* สีข้อความเมื่อ active */
+}
+
+.box_select p.selected {
+    background-color: #007bff; /* เปลี่ยนพื้นหลังเมื่อถูกเลือก */
+    color: white; /* สีข้อความเป็นสีขาว */
+    border-color: #007bff; /* เปลี่ยนสีขอบ */
+}
+
+input{
+    border-radius: 15px; /* มุมโค้งของ input */
+    padding: 20px; /* กำหนด padding */
+}
+
+.gender-box{
+    margin: 5% 0; /* กำหนด margin บนและล่าง 5% */
+}
+
+.gender-box h3{
+    margin-bottom: 30px; /* ระยะห่างด้านล่าง 30px */
+}
+
+.genger-option{
+    display: flex; /* ใช้ flexbox จัดเรียงตัวเลือกเพศ */
+    justify-content: space-around; /* จัดให้อยู่กระจายทั่ว */
+}
+
+.genger-option .gender input{
+    height: 10px; /* ความสูงของปุ่ม input */
+}
+
+/* ขนาดปุ่ม radio */
+.gender input[type="radio"] {
+    width: 25px; /* ขนาดของปุ่ม radio */
+    height: 25px; /* ขนาดของปุ่ม radio */
+    accent-color: #5AB2FF; /* สีของปุ่ม radio */
+}
+
+/* ปรับการจัดตำแหน่งของ label */
+.gender label {
+    margin-left: 10px; /* ระยะห่างระหว่างปุ่ม radio และข้อความ */
+    line-height: 30px; /* ปรับข้อความให้อยู่ตรงกลาง */
+}
+
+/* สไตล์ของกลุ่มตัวเลือกเพศ */
+.gender {
+    margin-bottom: 10px; /* ระยะห่างระหว่างตัวเลือกเพศ */
+}
+
+#payment{
+    width: 150px; /* กำหนดความกว้าง */
+    height: 80px; /* กำหนดความสูง */
+    margin: 20px; /* กำหนด margin */
+}
+
+.Payment_Method label{
+    margin-right: 40px; /* ระยะห่างทางขวาของ label */
+    font-size: 1.3em; /* ขนาดฟอนต์ */
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+}
+
+.Payment_Method input[type="checkbox"] {
+    margin-bottom: 40px; /* ระยะห่างด้านล่าง */
+    margin-top: 20px; /* ระยะห่างด้านบน */
+}
+
+.Preferred_Delivery option{
+    margin-right: 40px; /* ระยะห่างทางขวาของตัวเลือก */
+}
+
+#delivery{
+    width: 350px; /* ความกว้างของตัวเลือกการส่งสินค้า */
+    height: 80px; /* ความสูงของตัวเลือกการส่งสินค้า */
+}
+
+#delivery option{
+    font-size: 20px; /* ขนาดฟอนต์ของตัวเลือก */
+}
+
+.Preferred_Delivery label{
+    margin-right: 50px; /* ระยะห่างทางขวาของ label */
+}
+
+.Preferred_Delivery #delivery{
+    font-size: 1.05em; /* ขนาดฟอนต์ */
+}
+
+.Additional_Notes #notes{
+    margin-top: 20px; /* ระยะห่างด้านบน */
+    width: 100%; /* ความกว้างเต็ม */
+    height: 300px; /* ความสูง 300px */
+}
+
+.Shoe_size_select label{
+    margin-right: 40px; /* ระยะห่างทางขวาของ label */
+}
+
+.Shoe_size_select #Size{
+    width: 350px; /* ความกว้างของตัวเลือกขนาดรองเท้า */
+    height: 80px; /* ความสูงของตัวเลือกขนาดรองเท้า */
+    font-size: 1.05em; /* ขนาดฟอนต์ */
+}
+
+.btn{
+    display: flex; /* ใช้ flexbox จัดการ */
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    margin: 100px 0; /* ระยะห่างบนและล่าง 100px */
+}
+
+.btn a{
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+    border: 1px solid #000; /* เส้นขอบสีดำ */
+    padding: 30px; /* กำหนด padding */
+    border-radius: 30px; /* มุมโค้ง */
+    width: 200px; /* ความกว้าง */
+}
+
+.shipping-group label{
+    font-size: 1.3em; /* ขนาดฟอนต์ของ label */
+}
+
+.shipping-group input{
+    margin-top: 10px; /* ระยะห่างด้านบน */
+}
+
+#payment option{
+    font-size: 20px; /* ขนาดฟอนต์ของตัวเลือกการชำระเงิน */
+}
+
+.btn_payment{
+    display: flex; /* ใช้ flexbox จัดการ */
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+}
+
+.btn_payment a{
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+    border: 1px solid #000; /* เส้นขอบสีดำ */
+    padding: 30px; /* กำหนด padding */
+    border-radius: 30px; /* มุมโค้ง */
+    width: 300px; /* ความกว้าง */
+    background-color: #3AA6B9; /* พื้นหลังปุ่ม */
+    color: white; /* สีข้อความ */
+    font-size: 1.4em; /* ขนาดฟอนต์ */
+}
+
+.btn_payment a:hover{
+    background-color: #4379F2; /* พื้นหลังเมื่อ hover */
+    color: white; /* สีข้อความ */
+    font-size: 1.5em; /* ขนาดฟอนต์เมื่อ hover */
+    transform: scale(1.03); /* ขยายขนาดเล็กน้อยเมื่อ hover */
+    transition: .3s ease-in-out; /* การเปลี่ยนแปลงแบบ smooth */
+}
+
+nav{
+    display: flex; /* ใช้ flexbox จัดการ */
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    position: fixed; /* ตำแหน่ง fix */
+    z-index: 999; /* ซ้อนเลเยอร์สูง */
+    top: 8px; /* ระยะห่างจากขอบบน */
+    left: 3px; /* ระยะห่างจากขอบซ้าย */
+}
+
+nav a{
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+    border: 1px solid #000; /* เส้นขอบสีดำ */
+    padding: 10px; /* กำหนด padding */
+    border-radius: 30px; /* มุมโค้ง */
+    width: 150px; /* ความกว้าง */
+    background-color: #4379F2; /* พื้นหลัง */
+    color: white; /* สีข้อความ */
+    font-size: 1.4em; /* ขนาดฟอนต์ */
+}
+
+nav a:hover{
+    background-color: #4379F2; /* พื้นหลังเมื่อ hover */
+    color: white; /* สีข้อความ */
+    font-size: 1.5em; /* ขนาดฟอนต์เมื่อ hover */
+    transform: scale(1.03); /* ขยายขนาดเล็กน้อยเมื่อ hover */
+    transition: .3s ease-in-out; /* การเปลี่ยนแปลงแบบ smooth */
+}
